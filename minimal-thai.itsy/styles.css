@@ -1,0 +1,448 @@
+* {
+cursor:default;
+color:#bfbfbf;
+font:16px "Lucida Grande";
+text-shadow:0 1px 0 rgba(0,0,0,0.5);
+}
+
+body {
+-webkit-user-select:none;
+}
+
+a {
+color:#618199;
+cursor:pointer;
+text-decoration:none;
+text-shadow:0 1px 0 rgba(0,0,0,0.5);
+-webkit-transition:color .5s linear;
+}
+
+.btn {
+outline:0;
+margin-right:0;
+color:#444;
+font-weight:nomal;
+text-shadow:0 1px 0 rgba(51,51,51,0.5);
+background:0;
+-webkit-border-radius:5px;
+border:1px solid rgba(0,1,0,0.5);
+padding:4px 6px 2px;
+}
+
+.btn:hover {
+background:#1e1e1e;
+}
+
+#dvbackground {
+position:fixed;
+top:0;
+bottom:0;
+left:0;
+right:0;
+background:#1e1e1e;
+}
+
+#dvpanelcontainer {
+position:fixed;
+bottom:0;
+}
+
+#dvhome,#dvment,#dvmsgs,#dvsrch,#dvconv {
+position:absolute;
+padding-top:10px;
+top:0;
+bottom:0;
+overflow:auto;
+overflow-x:hidden;
+}
+
+.status-row {
+clear:both;
+border-bottom:1px solid #131313;
+-webkit-box-shadow:0 1px 0 rgba(255,255,255,0.05);
+margin:2px 4px 10px;
+}
+
+.status-row:hover .statusactions {
+visibility:visible;
+}
+
+.status-row.favorite .favicon {
+display:block;
+}
+
+.avatar {
+margin-top:3px;
+margin-left:2px;
+float:left;
+}
+
+.avatar img {
+height:36px;
+width:36px;
+margin-right:2px;
+-webkit-border-radius:2px;
+-webkit-background-clip:padding-box;
+-webkit-box-shadow:0 1px 1px rgba(0,0,0,0.5);
+}
+
+.status {
+position:relative;
+margin-left:36px;
+margin-right:1px;
+word-wrap:break-word;
+-webkit-user-select:text;
+margin-top:0;
+text-shadow:0 1px 0 rgba(51,51,51,0.5);
+padding:0 5px;
+}
+
+.status-row.myself .avatar {
+float:right;
+}
+
+.status-row.myself .status {
+margin-left:1px;
+margin-right:35px;
+}
+
+.status-row.mention .status {
+text-shadow:0 1px 0 rgba(51,51,51,0.5);
+color:#bfbfbf;
+}
+
+.status-row.mention {
+color:#bfbfbf;
+font-weight:nomal;
+}
+
+.status a {
+color:#618199;
+font-weight:nomal;
+-webkit-transition:color .1s linear;
+}
+
+.screenName {
+height:20px;
+padding-top:0px;
+text-overflow:ellipsis;
+white-space:nowrap;
+overflow:hidden;
+text-shadow:0 1px 0 rgba(0,0,0,0.5);
+}
+
+.screenName a {
+color:#888;
+font-weight:400;
+text-shadow:0 1px 0 rgba(0,0,0,0.5);
+-webkit-transition:color .5s linear;
+}
+
+.inlineImage {
+width:100%;
+cursor:pointer;
+border:3px solid rgba(242,242,242,1);
+-webkit-border-radius:1px;
+-webkit-box-shadow:0 1px 1px rgba(0,0,0,0.5);
+}
+
+.statusfooter {
+clear:both;
+height:24px;
+text-shadow:0 1px 0 rgba(51,51,51,0.5);
+}
+
+.timestamp,.timestamp a,.retweetedByline,.retweetedByline a {
+white-space:nowrap;
+color:#666;
+text-shadow:0 1px 0 rgba(0,0,0,0.5);
+font-weight:lighter;
+line-height:10px;
+font:12px "Lucida Grande";
+padding:6px 0 4px 1px;
+}
+
+.retweetedByline {
+clear:both;
+margin-bottom:-5px;
+padding:5px 0 0 1px;
+}
+
+.statusactions {
+float:right;
+visibility:hidden;
+padding:4px 0;
+}
+
+.favicon {
+float:right;
+width:14px;
+height:14px;
+background:url(toolbar.png) -97px -77px no-repeat;
+display:none;
+}
+
+.del,.dm,.fav,.reply,.rt,.conv {
+float:right;
+margin-right:4px;
+width:16px;
+height:16px;
+cursor:default;
+background:url(toolbar.png) no-repeat;
+}
+
+.del {
+background-position:-80px -60px;
+}
+
+.del:hover {
+background-position:-80px -76px;
+}
+
+.dm {
+background-position:-64px -60px;
+}
+
+.dm:hover {
+background-position:-64px -76px;
+}
+
+.fav {
+background-position:-48px -60px;
+}
+
+.fav:hover {
+background-position:-48px -76px;
+}
+
+.reply {
+background-position:-32px -60px;
+}
+
+.reply:hover {
+background-position:-32px -76px;
+}
+
+.rt {
+background-position:-16px -60px;
+}
+
+.rt:hover {
+background-position:-16px -76px;
+}
+
+.conv {
+background-position:0 -60px;
+}
+
+.conv:hover {
+background-position:0 -76px;
+}
+
+.convloading {
+white-space:nowrap;
+color:#888;
+text-shadow:0 1px 0 rgba(51,51,51,0.5);
+font-weight:nomal;
+padding:4px;
+}
+
+#dvsearchbox {
+text-align:center;
+border-bottom:1px solid #131313;
+padding:4px 4px 14px;
+}
+
+#insearchbox {
+color:#1e1e1e;
+width:80%;
+outline:0;
+opacity:1;
+}
+
+#dvsearchresults {
+position:absolute;
+top:30px;
+left:0;
+right:0;
+bottom:0;
+overflow:auto;
+overflow-x:hidden;
+}
+
+#dvtoolbar {
+position:fixed;
+top:0;
+left:0;
+right:0;
+margin-bottom:1px;
+background:0;
+-webkit-box-shadow:0 1px 0 rgba(13,13,13,1);
+display:none;
+padding:2px 10px 5px;
+}
+
+#dvcaret {
+position:fixed;
+top:6px;
+width:20px;
+height:20px;
+background:url(toolbar.png) 0 -40px no-repeat;
+}
+
+#bnhome,#bnment,#bnmsgs,#bnsrch,#bntogg {
+width:20px;
+height:20px;
+float:left;
+margin-right:10px;
+background:url(toolbar.png) no-repeat;
+}
+
+#bntogg {
+float:right;
+margin-right:0;
+background-position:-100px 0;
+}
+
+.unlit#bnhome {
+background-position:0 0;
+}
+
+.unlit#bnment {
+background-position:-20px 0;
+}
+
+.unlit#bnmsgs {
+background-position:-40px 0;
+}
+
+.lit#bnhome {
+background-position:0 -20px;
+}
+
+.lit#bnment {
+background-position:-20px -20px;
+}
+
+.lit#bnmsgs {
+background-position:-40px -20px;
+}
+
+#bnsrch {
+background-position:-80px 0;
+}
+
+#dvupdatearea {
+position:fixed;
+top:26px;
+left:0;
+right:0;
+display:none;
+background:rgba(46,46,46,1);
+border-bottom:1px solid rgba(13,13,13,1);
+padding:4px 8px 5px;
+}
+
+#taupdatearea {
+margin-top:4px;
+margin-bottom:8px;
+width:100%;
+background-color:rgba(30,30,30,1);
+outline:0;
+-webkit-border-radius:3px;
+-webkit-box-shadow:0 1px 0 rgba(256,256,256,0.1);
+border:1px solid rgba(0,0,0,0.5);
+border-width:0;
+}
+
+#spupdatecount {
+font-weight:nomal;
+color:rgba(242,242,242,1);
+text-shadow:0 1px 0 rgba(0,0,0,0.5);
+}
+
+#taupdatearea::-webkit-scrollbar {
+width:6px;
+padding-top:10px;
+}
+
+#taupdatearea::-webkit-scrollbar-thumb:vertical {
+height:30px;
+border:0;
+background:rgba(128,128,128,.25);
+-webkit-border-radius:3px;
+}
+
+#bnshorten {
+width:20px;
+height:20px;
+background:url(toolbar.png) -20px -40px no-repeat;
+}
+
+#bnupdate {
+margin-bottom:3px;
+text-shadow:0 1px 0 rgba(0,0,0,0.5);
+font-weight:nomal;
+color:rgba(242,242,242,1);
+-webkit-border-radius:4px;
+-webkit-box-shadow:0 1px 0 rgba(256,256,256,0.1);
+border:1px solid rgba(0,0,0,0.5);
+padding:4px 13px;
+}
+
+#dvmsg,#dvconfirmrt,#dvconfirmdelete {
+position:fixed;
+left:0;
+right:0;
+font-size:10px;
+font-weight:400;
+color:rgba(242,242,242,1);
+text-shadow:0 1px 0 rgba(0,0,0,0.5);
+background:rgba(46,46,46,1);
+border-bottom:1px solid rgba(13,13,13,1);
+padding:10px 11px;
+}
+
+::-webkit-scrollbar {
+width:9px;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+height:30px;
+-webkit-border-image:url(thumb.png) 8 0 8 0 stretch stretch;
+border-width:8px 0;
+}
+
+a:hover,.retweetedByline a:hover {
+color:#7aa2c0;
+cursor:pointer;
+text-decoration:none;
+-webkit-transition:color .1s linear;
+}
+
+.status-row.mention .status a:hover,.screenName a:hover {
+color:#7aa2c0;
+-webkit-transition:color .1s linear;
+}
+
+#bnconfirmrtyes,#bnconfirmdeleteyes {
+font-weight:nomal;
+color:rgba(242,242,242,1);
+text-shadow:0 1px 0 rgba(0,0,0,0.5);
+-webkit-border-radius:4px;
+-webkit-box-shadow:0 1px 0 rgba(51,51,51,0.5);
+border:1px solid rgba(0,0,0,0.5);
+-webkit-background-clip:padding-box;
+padding:4px 15px;
+}
+
+#bnconfirmrtno,#bnconfirmdeleteno {
+font-weight:nomal;
+color:rgba(242,242,242,1);
+text-shadow:0 1px 0 rgba(0,0,0,0.5);
+-webkit-border-radius:4px;
+-webkit-box-shadow:0 1px 0 rgba(51,51,51,0.5);
+border:1px solid rgba(0,0,0,0.5);
+-webkit-background-clip:padding-box;
+padding:4px 17px;
+}
