@@ -1,4 +1,4 @@
-minimal-thai
+Itsy-minimal-thai
 ============
 
 A minimal, large-font, Thai language friendly theme for "Itsy" mac twitter client. 
@@ -8,3 +8,5 @@ You can download **Itsy** for free from [Mac App Store](https://itunes.apple.com
 Just download and open .itsy file. It will install to Itsy automatically.
 
 Credit: **minimal** theme by @hiroshi1012 (http://dribbble.com/hiroshi1012)
+
+![ss](/README/ss.jpg)
